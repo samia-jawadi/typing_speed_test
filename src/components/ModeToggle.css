@@ -1,0 +1,62 @@
+/* Container for the toggle switch and label text */
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between switch and text */
+}
+
+/* Wrapper for the switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* width of the switch */
+  height: 24px; /* height of the switch */
+}
+
+/* Hide the default checkbox input */
+.switch input {
+  opacity: 0; /* make input invisible */
+  width: 0;
+  height: 0;
+}
+
+/* The slider (background of the toggle) */
+.slider {
+  position: absolute;
+  cursor: pointer; /* pointer cursor on hover */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* grey background */
+  border-radius: 34px; /* rounded edges */
+  transition: 0.4s; /* smooth animation */
+}
+
+/* The circle inside the slider */
+.slider:before {
+  position: absolute;
+  content: ""; /* required for pseudo element */
+  height: 18px;
+  width: 18px;
+  left: 3px; /* initial position */
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%; /* make it a circle */
+  transition: 0.4s; /* smooth animation */
+}
+
+/* When checkbox is checked, change slider background */
+input:checked + .slider {
+  background-color: #2196f3; /* blue background */
+}
+
+/* Move the circle to the right when checked */
+input:checked + .slider:before {
+  transform: translateX(26px); /* slide the circle */
+}
+
+/* Style for the label text next to the toggle */
+.label-text {
+  font-size: 0.9rem;
+}

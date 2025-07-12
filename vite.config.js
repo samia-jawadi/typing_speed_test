@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/typing_speed_tester/", // Set the base path for GitHub Pages
+  base: "./", // Set the base path for GitHub Pages
 });
